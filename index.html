@@ -103,15 +103,15 @@
             pp.c = 0;
         }
 
-        pp.pl = Math.round(Math.random()*100/3);  //随机位置
+        pp.pl = Math.round(Math.random()*100/10);  //随机位置
 
         //执行动画
         $(".paopao").each(function () {
 
             if($(this).index()%2 == 0){
-                pp.step = 50;
-            }else if($(this).index()%3 == 0){
                 pp.step = 100;
+            }else if($(this).index()%3 == 0){
+                pp.step = 200;
             }else{
                 pp.step = 300;
             }
