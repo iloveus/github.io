@@ -1,0 +1,146 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<title>I love U</title>
+		<link href="love/base.css" type="text/css" rel="stylesheet">
+	<style>
+		.main{
+			text-align: center; /*让div内部文字居中*/
+			background-color: #fff;
+			border-radius: 20px;
+			width: 400px;
+			height: 350px;
+			margin: auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			font-size:60px;
+			font-weight:bold;
+		}
+		.hello {
+			display:none;
+		}
+	</style></head>
+	
+
+	<body>
+		<div class="main">
+			<div class="hello" style="display: none; opacity: 0.0120416;">
+				<div id="h">Bonjour</div>
+				<div id="l">Je t'aime</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="pao">
+			<div class="paopao iconfont" style="left: 7px; color: rgb(206, 79, 109); top: -986.36px; font-size: 99.0418px; opacity: 0.0140914;"></div><div class="paopao iconfont" style="left: 15px; color: rgb(202, 79, 206); top: -972.786px; font-size: 98.0883px; opacity: 0.0281139;"></div><div class="paopao iconfont" style="left: 0px; color: rgb(206, 202, 79); top: -861.45px; font-size: 90.2671px; opacity: 0.14313;"></div><div class="paopao iconfont" style="left: 32px; color: rgb(206, 79, 109); top: -831.488px; font-size: 88.1623px; opacity: 0.174083;"></div><div class="paopao iconfont" style="left: 8px; color: rgb(202, 79, 206); top: -989.529px; font-size: 99.2644px; opacity: 0.0108176;"></div><div class="paopao iconfont" style="left: 25px; color: rgb(79, 130, 206); top: -954.367px; font-size: 96.7944px; opacity: 0.0471416;"></div><div class="paopao iconfont" style="left: 32px; color: rgb(79, 206, 145); top: -893.094px; font-size: 92.4901px; opacity: 0.11044;"></div><div class="paopao iconfont" style="left: 3px; color: rgb(206, 202, 79); top: -562.684px; font-size: 69.2794px; opacity: 0.451773;"></div><div class="paopao iconfont" style="left: 19px; color: rgb(206, 79, 109); top: -512.579px; font-size: 65.7597px; opacity: 0.503534;"></div><div class="paopao iconfont" style="left: 3px; color: rgb(202, 79, 206); top: -462.133px; font-size: 62.216px; opacity: 0.555648;"></div><div class="paopao iconfont" style="left: 27px; color: rgb(79, 130, 206); top: -410.048px; font-size: 58.5571px; opacity: 0.609455;"></div><div class="paopao iconfont" style="left: 18px; color: rgb(79, 206, 145); top: -899.829px; font-size: 92.9632px; opacity: 0.103483;"></div><div class="paopao iconfont" style="left: 19px; color: rgb(206, 202, 79); top: -706.823px; font-size: 79.4049px; opacity: 0.302869;"></div><div class="paopao iconfont" style="left: 20px; color: rgb(206, 79, 109); top: -157.763px; font-size: 40.8346px; opacity: 0.87008;"></div><div class="paopao iconfont" style="left: 6px; color: rgb(202, 79, 206); top: -388.285px; font-size: 57.0283px; opacity: 0.631937;"></div><div class="paopao iconfont" style="left: 30px; color: rgb(79, 130, 206); top: -70.9059px; font-size: 34.7331px; opacity: 0.959808;"></div><div class="paopao iconfont" style="left: 4px; color: rgb(79, 206, 145); top: -54.1856px; font-size: 33.5585px; opacity: 0.977081;"></div><div class="paopao iconfont" style="left: 18px; color: rgb(206, 202, 79); top: -42.2887px; font-size: 32.7228px; opacity: 0.989371;"></div><div class="paopao iconfont" style="left: 28px; color: rgb(206, 79, 109); top: -45.551px; font-size: 32.9519px; opacity: 0.986001;"></div></div>
+		</div>
+	
+
+	<script src="love/jq.js"></script>
+	<script>
+		var vs = [
+			{h:'Hello', v: 'I love you'},
+			{h:'你好', v: '我爱你'},
+			{h:'こんにちは', v: '爱してる'},
+			{h:'안녕하세요', v: '나는 너를 사랑해'}, // 韩
+			{h:'မင်္ဂလာပါ', v: 'ငါသည်သင်တို့ကိုချစ်'}, // 缅甸
+			{h:'Hola', v: 'Te amo'}, // 西班牙
+			{h:'สวัสดี', v: 'ฉันรักคุณ'}, // 泰
+			{h:'Hello', v: 'Mahal kita'}, // 菲
+			{h:'Hello', v: 'Saya sayang awak'}, // 马来
+			{h:'прывітанне', v: 'Я люблю цябе'}, // 俄
+			{h:'Hallo', v: 'Ich liebe dich'}, // 德
+			{h:'Cześć', v: 'Kocham cię'}, // 波兰
+			{h:'مرحبا', v: 'انا احبك'}, // 阿拉伯
+			{h:'Xin chào', v: 'Anh yêu em'}, // 越南
+			{h:'Bonjour', v: 'Je t\'aime'}, // 法
+			{h:'Halo', v: 'Aku mencintaimu'} //印尼
+		]
+		var i = 0
+		var len = vs.length
+
+		$(function() {
+			begin()
+			setInterval(function() {
+				begin()
+			},5000)
+		})
+
+		function begin() {
+			$('.hello').css('display','none')
+			$('#h').html(vs[i].h)
+			$('#l').html(vs[i].v)
+			show()
+			//console.log(vs[i].h + vs[i].v)
+			//console.log(i)
+			if(i < len - 1){
+				i++
+			} else {
+				i = 0
+			}
+		}
+
+		function show() {
+			$('.hello').fadeToggle(2500);
+			setTimeout(function() {
+				$('.hello').fadeOut(2500);
+			},2500)
+		}
+
+	</script>
+	<script type="text/javascript">
+    $(function(){
+        paopao();
+    });
+    //需要的参数
+    var pp = {
+        pl : 0,   //生成的paopao随机的居左的位置
+        color : ["ce4f6d","ca4fce","4f82ce","4fce91","ceca4f"],   //随机添加的颜色
+        c : 0,  //初始化颜色
+        step : 500
+    };
+    function paopao(){
+        //添加元素
+        var html = '<div class="paopao iconfont" style="left: '+ pp.pl + 'px;color: #'+ pp.color[pp.c] +'">&#xe60d;</div>';
+        $(".pao").append(html);
+
+        //获取颜色
+        pp.c ++;
+        if(pp.c >= pp.color.length){
+            pp.c = 0;
+        }
+
+        pp.pl = Math.round(Math.random()*100/3);  //随机位置
+
+        //执行动画
+        $(".paopao").each(function () {
+
+            if($(this).index()%2 == 0){
+                pp.step = 100;
+            }else if($(this).index()%3 == 0){
+                pp.step = 200;
+            }else{
+                pp.step = 300;
+            }
+
+            if (!$(this).is(":animated")) {
+                $(this).animate({            //运动
+                    top: "-1000px",
+                    fontSize: "100px",
+                    opacity: "0"
+                }, (500-pp.step)*10,
+                function () {
+                    $(this).remove();        //清除元素
+                })
+            }
+        });
+        //定时器
+        setTimeout(paopao,pp.step);
+    }
+
+</script>
+
+</body></html>
